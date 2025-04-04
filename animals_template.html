@@ -1,0 +1,100 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <style>
+        @gray-darker:               #444444;
+        @gray-dark:                 #696969;
+        @gray:                      #999999;
+        @gray-light:                #cccccc;
+        @gray-lighter:              #ececec;
+        @gray-lightest:             lighten(@gray-lighter,4%);
+
+
+        html {
+          background-color: #F0F8FF;
+          height: 100%;
+        }
+
+        h1 {
+            text-align: center;
+            font-size: 40pt;
+            font-weight: bold;
+            margin-bottom: 40px;
+            margin-top: 20px;
+            color: #000022;
+        }
+
+        body {
+          font-family: 'Roboto','Helvetica Neue', Helvetica, Arial, sans-serif;
+          font-style: normal;
+          font-weight: 400;
+          letter-spacing: 0;
+          padding: 1rem;
+          text-rendering: optimizeLegibility;
+          -webkit-font-smoothing: antialiased;
+          -moz-osx-font-smoothing: grayscale;
+          -moz-font-feature-settings: "liga" on;
+          width: 900px;
+          margin: auto;
+        }
+
+        .cards {
+          list-style: none;
+          margin: 0;
+          padding: 0;
+        }
+
+        .cards__item {
+          background-color: ivory;
+          border-radius: 0.25rem;
+          box-shadow: 0 20px 40px -14px rgba(0,0,0,0.25);
+          overflow: hidden;
+          padding: 1rem;
+          margin: 30px 50px;
+        }
+
+        .card__title {
+          color: #000080;
+          font-size: 1.5rem;
+          font-weight: bold;
+          letter-spacing: 2px;
+          text-transform: uppercase;
+          margin-bottom: 15px;
+          text-align: center;
+        }
+
+        .card__text {
+          flex: 1 1 auto;
+          font-size: 0.95rem;
+          line-height: 2;
+          margin-bottom: 1.25rem;
+          text-align: center;
+        }
+
+        .card__text ul {
+          list-style: none;
+          padding-left: 0;
+          margin-left: 0;
+        }
+
+        .missing-data {
+          color: #666;
+          margin: 40px 0 20px;
+          padding-top: 30px;
+          border-top: 2px dashed #ddd;
+        }
+
+        h2 {
+          color: #000022;
+          margin: 30px 0 15px;
+          font-weight: bold;
+        }
+        </style>
+    </head>
+    <body>
+        <h1>My Animal Repository</h1>
+        <ul class="cards">
+            __REPLACE_ANIMALS_INFO__
+        </ul>
+    </body>
+</html>
