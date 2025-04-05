@@ -28,34 +28,38 @@ Used modules that are part of the python standard library: sys, dataclasses, os.
    ```bash
    git clone https://github.com/Sammyduzit/My-Zootopia-API.git
    cd My-Zootopia-API
-
+   ```	
 2. **Create virtual environment (optional):**
-
+	```bash
 	python -m venv venv
 	source venv/bin/activate
-
+	```	
 3. **Install required packages:**
 	
 	install required packages from requirements.txt with:
+	```bash
 	pip install -r requirements.txt
+	```	
 
 4. **Create/Implement API KEY**
 	- Create a .env file in the project root directory.
 	
 	- If you don't have an API Ninjas API KEY yet (if you do, skip this part):
-		1. Go to API Ninja website and click on the “Sign Up” button.
-		2. Enter the details and send the sign up form.
-		3. Check your email inbox, you should find there a verification link. Click on "Verify Email".
-		4. On the website, click on "My Account" -> “Show API Key”
+		I. Go to API Ninja website and click on the “Sign Up” button.
+		II. Enter the details and send the sign up form.
+		III. Check your email inbox, you should find there a verification link. Click on "Verify Email".
+		IV. On the website, click on "My Account" -> “Show API Key”
 
 	- Add your API KEY to .env:
+		```bash
 		API_KEY=your_api_key_here
-
+		```	
 
 ## Usage
 1. Run the script using:
+	```bash
 	python animals_web_generator.py
-
+	```
 2. When prompted, enter the name of an animal (or type q to quit). The script will:
 * Fetch data from the API.
 * Process and structure the data.
