@@ -57,7 +57,7 @@ Modules used from the python standard library: `sys`, `dataclasses`, `os`.
 		* Go to [API Ninjas](https://api-ninjas.com/) website and click on the “Sign Up” button.
 		* Enter the details and send the sign up form.
 		* Check your email inbox, you should find there a verification link. Click on "Verify Email".
-		* On the website, click on "My Account" -> “Show API Key”
+		* On the website, click on "My Account" -> “Show API Key”.
 
 	- Add your API KEY to the `.env` file:
 		```bash
