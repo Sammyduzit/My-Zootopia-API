@@ -5,16 +5,28 @@ from dotenv import load_dotenv
 load_dotenv()
 API_KEY = os.getenv('API_KEY')
 
-def get_animal_data(name):
+def fetch_data(animal_name):
     """
-    Fetches animal information from API-Ninjas animal database for given animal name. Response is json format.
-    :param name: Name of animal to search for.
-    :return: List of all matching animals if request is successful, otherwise None and error message
+    Fetches the animals data for the animal 'animal_name'.
+    :param animal_name: Name of animal to search for.
+    :return: Returns a list of animals, each animal is a dictionary:
+    {
+    'name': ...,
+    'taxonomy': {
+      ...
+    },
+    'locations': [
+      ...
+    ],
+    'characteristics': {
+      ...
+    }
+    },
     """
-    api_url = 'https://api.api-ninjas.com/v1/animals?name={}'.format(name)
+    api_url = 'https://api.api-ninjas.com/v1/animals?name={}'.format(animal_name)
     response = requests.get(api_url, headers={'X-Api-Key': f'{API_KEY}'})
     if response.status_code == requests.codes.ok:
-        animal_list = response.json()
-        return animal_list
+      animal_list = response.json()
+      return animal_list
     else:
-        print("Error:", response.status_code, response.text)
+      print("Error:", response.status_code, response.text)

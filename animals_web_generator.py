@@ -140,7 +140,7 @@ def main():
     5. Generate and save HTML
     """
     animal_name = get_user_animal()
-    matching_animals = data_fetcher.get_animal_data(animal_name)
+    matching_animals = data_fetcher.fetch_data(animal_name)
     animal_list = data_processing.process_animal_data(matching_animals)
 
     animals_html = generate_html_content(animal_name, animal_list)
