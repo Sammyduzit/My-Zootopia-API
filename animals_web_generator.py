@@ -253,13 +253,18 @@ def generate_animal_card(animal_data):
     return "\n".join(card) + "\n"
 
 
-def generate_all_cards(animals):
-    """
-    Generate the HTML string for all animals.
-    :param animals: List of Animal objects
-    :return: String containing HTML markup for all animal cards
-    """
-    return "".join(generate_animal_card(animal) for animal in animals)
+def generate_html_content(animal_name, animal_list):
+    html_parts = []
+
+    if not animal_list:
+        html_parts.append(f"<h3>Alas, the databank holds no creature by the name '{animal_name}'.<br>"
+                f"Let this be the whisper of destiny—a call to wander the wild unknown,<br>"
+                f"where hidden marvels await your gentle touch to name them, forever as '{animal_name}'.</h3>")
+    else:
+        html_parts.append(f"<h2>All Animals matching {animal_name.upper()}:</h2>")
+        html_parts.extend(generate_animal_card(a) for a in animal_list)
+
+    return "".join(html_parts)
 
 
 def insert_data_into_template(template, animals_html):
@@ -283,7 +288,7 @@ def main():
     matching_animals = get_animal_data(animal_name)
     animal_list = process_animal_data(matching_animals)
 
-    animals_html = generate_all_cards(animal_list)
+    animals_html = generate_html_content(animal_name, animal_list)
     #Generate HTML
     html_template = load_html_template("animals_template.html")
     final_html = insert_data_into_template(html_template, animals_html)
