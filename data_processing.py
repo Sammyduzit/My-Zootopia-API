@@ -28,12 +28,15 @@ class Characteristics:
     prey: str = None
     name_of_young: str = None
     habitat: str = None
+    water_type: str = None
+    optimum_ph_level: str = None
     predators: str = None
     lifestyle: str = None
     favorite_food: str = None
     top_speed: str = None
     weight: str = None
     height: str = None
+    length: str = None
     group_behavior: str = None
     estimated_population_size: str = None
     biggest_threat: str = None
@@ -41,7 +44,10 @@ class Characteristics:
     number_of_species: str = None
     age_of_sexual_maturity: str = None
     age_of_weaning: str = None
-
+    wingspan: str = None
+    incubation_period: str = None
+    nesting_location: str = None
+    age_of_molting: str = None
 
 @dataclass
 class Animal:
@@ -87,19 +93,27 @@ def create_animal_instance(animal_data):
         prey=characteristics_data.get("prey"),
         name_of_young=characteristics_data.get("name_of_young"),
         habitat=characteristics_data.get("habitat"),
+        water_type=characteristics_data.get("water_type"),
+        optimum_ph_level=characteristics_data.get("optimum_ph_level"),
         predators=characteristics_data.get("predators"),
         lifestyle=characteristics_data.get("lifestyle"),
         favorite_food=characteristics_data.get("favorite_food"),
         top_speed=characteristics_data.get("top_speed"),
         weight=characteristics_data.get("weight"),
         height=characteristics_data.get("height"),
+        length=characteristics_data.get("length"),
         group_behavior=characteristics_data.get("group_behavior"),
         estimated_population_size=characteristics_data.get("estimated_population_size"),
         biggest_threat=characteristics_data.get("biggest_threat"),
         gestation_period=characteristics_data.get("gestation_period"),
         number_of_species=characteristics_data.get("number_of_species"),
         age_of_sexual_maturity=characteristics_data.get("age_of_sexual_maturity"),
-        age_of_weaning=characteristics_data.get("age_of_weaning")
+        age_of_weaning=characteristics_data.get("age_of_weaning"),
+        wingspan=characteristics_data.get("wingspan"),
+        incubation_period=characteristics_data.get("incubation_period"),
+        nesting_location=characteristics_data.get("nesting_location"),
+        age_of_molting=characteristics_data.get("age_of_molting"),
+
     )
 
     return Animal(

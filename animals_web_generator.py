@@ -70,37 +70,132 @@ def generate_animal_card(animal_data):
     card.append('<div class="card__text">\n<ul>')
 
     if animal_data.taxonomy.scientific_name:
-        card.append(f'<li><strong>Scientific Name:</strong> {animal_data.taxonomy.scientific_name}</li>')
+        card.append(f'<li><strong>Scientific Name:</strong> '
+                    f'{animal_data.taxonomy.scientific_name}</li>')
 
     if animal_data.characteristics.type:
-        card.append(f'<li><strong>Type:</strong> {animal_data.characteristics.type}</li>')
+        card.append(f'<li><strong>Type:</strong> '
+                    f'{animal_data.characteristics.type}</li>')
 
     if animal_data.characteristics.skin_type:
-        card.append(f'<li><strong>Skin Type:</strong> {animal_data.characteristics.skin_type}</li>')
+        card.append(f'<li><strong>Skin Type:</strong> '
+                    f'{animal_data.characteristics.skin_type}</li>')
 
     if animal_data.locations:
-        card.append(f'<li><strong>Location(s):</strong> {", ".join(animal_data.locations)}</li>')
+        card.append(f'<li><strong>Location(s):</strong> '
+                    f'{", ".join(animal_data.locations)}</li>')
 
     if animal_data.characteristics.habitat:
-        card.append(f'<li><strong>Habitat:</strong> {animal_data.characteristics.habitat}</li>')
+        card.append(f'<li><strong>Habitat:</strong> '
+                    f'{animal_data.characteristics.habitat}</li>')
+
+    if animal_data.characteristics.water_type:
+        card.append(f'<li><strong>Water type:</strong> '
+                    f'{animal_data.characteristics.water_type}</li>')
+
+    if animal_data.characteristics.optimum_ph_level:
+        card.append(f'<li><strong>Optimum ph-level:</strong> '
+                    f'{animal_data.characteristics.optimum_ph_level}</li>')
+
+    if animal_data.characteristics.nesting_location:
+        card.append(f'<li><strong>Nesting location:</strong> '
+                    f'{animal_data.characteristics.nesting_location}</li>')
+
+    if animal_data.characteristics.group_behavior:
+        card.append(f'<li><strong>Group behavior:</strong> '
+                    f'{animal_data.characteristics.group_behavior}</li>')
 
     if animal_data.characteristics.diet:
-        card.append(f'<li><strong>Diet:</strong> {animal_data.characteristics.diet}</li>')
+        card.append(f'<li><strong>Diet:</strong> '
+                    f'{animal_data.characteristics.diet}</li>')
+
+    if animal_data.characteristics.favorite_food:
+        card.append(f'<li><strong>Favorite food:</strong> '
+                    f'{animal_data.characteristics.favorite_food}</li>')
 
     if animal_data.characteristics.prey:
-        card.append(f'<li><strong>Main Prey:</strong> {animal_data.characteristics.prey}</li>')
+        card.append(f'<li><strong>Prey:</strong> '
+                    f'{animal_data.characteristics.prey}</li>')
 
     if animal_data.characteristics.predators:
-        card.append(f'<li><strong>Predators:</strong> {animal_data.characteristics.predators}</li>')
+        card.append(f'<li><strong>Predators:</strong> '
+                    f'{animal_data.characteristics.predators}</li>')
+
+    if animal_data.characteristics.training:
+        card.append(f'<li><strong>Training:</strong> '
+                    f'{animal_data.characteristics.training}</li>')
 
     if animal_data.characteristics.most_distinctive_feature:
-        card.append(f'<li><strong>Distinctive Features:</strong> {animal_data.characteristics.most_distinctive_feature}</li>')
+        card.append(f'<li><strong>Distinctive Features:</strong> '
+                    f'{animal_data.characteristics.most_distinctive_feature}</li>')
 
     if animal_data.characteristics.temperament:
-        card.append(f'<li><strong>Temperament:</strong> {animal_data.characteristics.temperament}</li>')
+        card.append(f'<li><strong>Temperament:</strong> '
+                    f'{animal_data.characteristics.temperament}</li>')
 
     if animal_data.characteristics.name_of_young:
-        card.append(f'<li><strong>Offspring Name:</strong> {animal_data.characteristics.name_of_young}</li>')
+        card.append(f'<li><strong>Offspring Name:</strong> '
+                    f'{animal_data.characteristics.name_of_young}</li>')
+
+    if animal_data.characteristics.average_litter_size:
+        card.append(f'<li><strong>Average litter size:</strong> '
+                    f'{animal_data.characteristics.average_litter_size}</li>')
+
+    if animal_data.characteristics.gestation_period:
+        card.append(f'<li><strong>Gestation period:</strong> '
+                    f'{animal_data.characteristics.gestation_period}</li>')
+
+    if animal_data.characteristics.incubation_period:
+        card.append(f'<li><strong>Incubation period:</strong> '
+                    f'{animal_data.characteristics.incubation_period}</li>')
+
+    if animal_data.characteristics.age_of_weaning:
+        card.append(f'<li><strong>Age of weaning:</strong> '
+                    f'{animal_data.characteristics.age_of_weaning}</li>')
+
+    if animal_data.characteristics.age_of_sexual_maturity:
+        card.append(f'<li><strong>Age of sexual maturity:</strong> '
+                    f'{animal_data.characteristics.age_of_sexual_maturity}</li>')
+
+    if animal_data.characteristics.age_of_molting:
+        card.append(f'<li><strong>Age of molting:</strong> '
+                    f'{animal_data.characteristics.age_of_molting}</li>')
+
+    if animal_data.characteristics.weight:
+        card.append(f'<li><strong>Weight:</strong> '
+                    f'{animal_data.characteristics.weight}</li>')
+
+    if animal_data.characteristics.height:
+        card.append(f'<li><strong>Height:</strong> '
+                    f'{animal_data.characteristics.height}</li>')
+
+    if animal_data.characteristics.length:
+        card.append(f'<li><strong>Length:</strong> '
+                    f'{animal_data.characteristics.length}</li>')
+
+    if animal_data.characteristics.wingspan:
+        card.append(f'<li><strong>Wingspan:</strong> '
+                    f'{animal_data.characteristics.wingspan}</li>')
+
+    if animal_data.characteristics.top_speed:
+        card.append(f'<li><strong>Top speed:</strong> '
+                    f'{animal_data.characteristics.top_speed}</li>')
+
+    if animal_data.characteristics.lifespan:
+        card.append(f'<li><strong>Lifespan:</strong> '
+                    f'{animal_data.characteristics.lifespan}</li>')
+
+    if animal_data.characteristics.estimated_population_size:
+        card.append(f'<li><strong>Estimated population size:</strong> '
+                    f'{animal_data.characteristics.estimated_population_size}</li>')
+
+    if animal_data.characteristics.biggest_threat:
+        card.append(f'<li><strong>Biggest threat:</strong> '
+                    f'{animal_data.characteristics.biggest_threat}</li>')
+
+    if animal_data.characteristics.slogan:
+        card.append(f'<li><strong>Slogan:</strong> '
+                    f'{animal_data.characteristics.slogan}</li>')
 
     card.append("</ul>")
     card.append("</div>")
