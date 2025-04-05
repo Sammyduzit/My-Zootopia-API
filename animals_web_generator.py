@@ -288,6 +288,7 @@ def main():
     html_template = load_html_template("animals_template.html")
     final_html = insert_data_into_template(html_template, animals_html)
     save_to_file("animals.html", final_html)
+    print("Website was successfully generated to the file animals.html.")
 
 
 if __name__ == "__main__":
